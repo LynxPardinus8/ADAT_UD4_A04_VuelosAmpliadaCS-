@@ -11,8 +11,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		require 'comprarVuelo.php';
 		comprarVuelo();
 		break;
+	case 'DELETE':
+		require 'cancelarVuelo.php';
+		borrarVuelo();
+		break;
 	default:
 		echo "No disponible";
 		break;
 }
-?>
