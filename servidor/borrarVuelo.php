@@ -59,18 +59,18 @@ function borrarVuelo()
 
         if (isset ( $result ) && $result) { // Si pasa por este if, la query está está bien y se ha insertado correctamente
             $arrMensaje["estado"] = true;
-            $arrMensaje["mensaje"] = "Se ha completado la compra";
+            $arrMensaje["mensaje"] = "Se ha cancelado la compra";
         }
         else { // Se ha producido algún error al ejecutar la query
             $arrMensaje["estado"] = false;
-            $arrMensaje["mensaje"] = "No se ha podido realizar la compra por error en la query";
+            $arrMensaje["mensaje"] = "No se ha podido cancelar la compra por error en la query";
 
         }
 
     }
     else { // Nos ha llegado un json no tiene los campos necesarios
         $arrMensaje["estado"] = false;
-        $arrMensaje["mensaje"] = "No se ha podido realizar la compra por que los campos no tiene los datos correspondientes";
+        $arrMensaje["mensaje"] = "No se ha podido cancelar la compra por que los campos no tiene los datos correspondientes";
         $arrMensaje["recibido"] = $mensajeRecibido;
         $arrMensaje["esperado"] = $arrEsperado;
     }
@@ -78,7 +78,7 @@ function borrarVuelo()
 }
 else { // No nos han enviado el json correctamente
     $arrMensaje["estado"] = false;
-    $arrMensaje["mensaje"] = "No se ha podido realizar la compra por error en los datos recibidos";
+    $arrMensaje["mensaje"] = "No se ha podido cancelar la compra por error en los datos recibidos";
 
 }
 

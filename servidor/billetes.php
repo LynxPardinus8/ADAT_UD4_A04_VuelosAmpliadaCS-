@@ -15,6 +15,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		require 'cancelarVuelo.php';
 		borrarVuelo();
 		break;
+	case 'PUT':
+		require 'modificarVuelo.php';
+		modificarVuelo();
+		break;
 	default:
 		echo "No disponible";
 		break;
